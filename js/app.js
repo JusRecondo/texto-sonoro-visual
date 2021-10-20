@@ -24,6 +24,13 @@ textInput.addEventListener( 'keyup', function ( e ) {
 
 textInput.addEventListener( 'keydown', function ( e ) {
     let key = e.keyCode;
+
+    /*     if( e.keyCode !== 13 ) {
+        line.push( key );
+    } else {
+        console.log('linea escrita: ', line);
+        line = [];
+    }  */
    
     let freq = mapping( 222, key, 1000, 60 );
 
@@ -53,7 +60,6 @@ textInput.addEventListener( 'keydown', function ( e ) {
 
     if( filterRes < 20 ) {
         filterRes += 0.5;
-        console.log(filterRes);
         filter.Q.exponentialRampToValueAtTime( filterRes, audioCtx.currentTime + 0.1 ); 
     } else {
         let randomVal = getRandomValue( 1.5, 2.1 );

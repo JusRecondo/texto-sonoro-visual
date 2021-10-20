@@ -126,6 +126,7 @@ textarea#text-mirror {
         padding: 4vw;
     }
 }
+
 @media (max-width: 1024px ) {
     section#editor {
         flex-direction: column;
@@ -134,4 +135,14 @@ textarea#text-mirror {
     textarea#text-input {
         width: 100%;
     } 
+}
+
+@media (min-width: 1500px) {
+    textarea {
+        font-size: 24px;
+    }
+
+    textarea#text-mirror {
+        font-size: 32px;
+    }
 }
