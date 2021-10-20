@@ -48,8 +48,15 @@ a:hover {
     font-style: italic;
 }
 
+a.help {
+    position: absolute;
+    bottom: 10px;
+    border: 1px solid var(--text-light);
+    padding: 1px 2px;
+}
+
 main {
-    padding: 2vw 4vw;
+    padding: 2vw 4vw 1vw;
 }
 
 section {
@@ -113,6 +120,12 @@ textarea#text-mirror {
 }
 
 
+@media (max-width: 768px ) {
+
+    main {
+        padding: 4vw;
+    }
+}
 @media (max-width: 1024px ) {
     section#editor {
         flex-direction: column;
