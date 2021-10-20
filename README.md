@@ -7,6 +7,8 @@ palabras, frases, espaciados).
 ### A partir de un input de texto, se registran las teclas presionadas y se mapean para, en conjunto con
 valores random, generar osciladores y modificar sus parámetros. 
 
+###Para la síntesis de sonido se utiliza la [Web Audio API](https://developer.mozilla.org/es/docs/Web/API/Web_Audio_API)
+
 ### Puede ser utlizado por escritores, músiques, programadores, cualquier persona, ya sea que le 
 interese la escritura, el sonido, o que le guste tipear.
 
