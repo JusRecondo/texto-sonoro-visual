@@ -18,20 +18,14 @@ var detune = 0;
 var filterCut = 2500;
 var filterRes= 2;
 
+textInput.addEventListener( 'keyup', function ( e ) {
+    textMirror.value = e.target.value; 
+} );
+
 textInput.addEventListener( 'keydown', function ( e ) {
     let key = e.keyCode;
-    textMirror.value = e.target.value; 
-   /*  console.log(key); */
-
-    if( e.keyCode !== 13 ) {
-        line.push( key );
-    } else {
-        console.log('linea escrita: ', line);
-        line = [];
-    } 
    
     let freq = mapping( 222, key, 1000, 60 );
-   /*  console.log(freq); */
 
     let randomWave = getRandomValue( 0, 4 );
 
