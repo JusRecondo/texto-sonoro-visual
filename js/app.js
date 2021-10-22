@@ -18,19 +18,13 @@ var detune = 0;
 var filterCut = 2500;
 var filterRes= 2;
 
-textInput.addEventListener( 'keyup', function ( e ) {
+textInput.addEventListener( 'input', function ( e ) {
     textMirror.value = e.target.value; 
 } );
 
 textInput.addEventListener( 'keydown', function ( e ) {
     let key = e.keyCode;
 
-    /*     if( e.keyCode !== 13 ) {
-        line.push( key );
-    } else {
-        console.log('linea escrita: ', line);
-        line = [];
-    }  */
    
     let freq = mapping( 222, key, 1000, 60 );
 
@@ -92,6 +86,7 @@ function createOsc( ctx, freq, det, wave, dur ) {
     return osc;
 }
 
+/* Gneral function for mapping values between range */
 function mapping( total, input, max, min ) {
     return  (input / total) * ( max - min ) + min;
 }
